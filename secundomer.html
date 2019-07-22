@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<center><h1 id="score">0</h1>
+<button onclick="play()"><img src="sec1.png" height="100"></button><button onclick="pause()"><img src="sec2.jpg" height="100"></button><button onclick="stop()"><img src="sec3.png" height="100"></button>
+</body>
+<script>
+    i=0
+    timer=undefined
+    function play(){
+        clearInterval(timer)
+        timer = setInterval(function () {
+            i=i+1
+            document.getElementById('score').innerHTML=i
+        },1000)
+    }
+    function pause(){
+        clearInterval(timer)
+    }
+    function stop(){
+        clearInterval(timer)
+            i=0
+            document.getElementById('score').innerHTML=i
+
+    }
+</script>
+</html>
